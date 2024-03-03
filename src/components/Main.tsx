@@ -1,7 +1,17 @@
 import styled from "styled-components";
+import { Outlet } from "react-router-dom";
 
-const Main = ({ outlet }) => {
-  return <MainWrapper>{outlet}</MainWrapper>;
+// interface OutletProps {
+//   context?: unknown;
+// }
+// declare function Outlet(props: OutletProps): React.ReactElement | null;
+
+const Main = () => {
+  return (
+    <MainWrapper>
+      <Outlet />
+    </MainWrapper>
+  );
 };
 const MainWrapper = styled.main`
   margin: 0 auto;

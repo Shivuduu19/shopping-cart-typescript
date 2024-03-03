@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -11,7 +11,7 @@ function App() {
     <>
       <Provider store={store}>
         <Header />
-        <Main outlet={<Outlet />} />
+        <Main />
         <Footer />
         <Cart />
       </Provider>
