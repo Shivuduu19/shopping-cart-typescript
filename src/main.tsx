@@ -8,10 +8,12 @@ import Products from "./pages/products/Products.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./index.css";
 import { LogIn } from "./pages/login/LogIn.jsx";
+import ErrorPage from "./ErrorPage.js";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <GlobalStyle />
     <RouterProvider router={router} />
