@@ -45,7 +45,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
   width: 100%;
   margin: 0 auto;
   @media (max-width: 768px) {
@@ -53,7 +53,7 @@ const Container = styled.div`
     /* gap: 3rem; */
   }
   @media (max-width: 460px) {
-    padding: 0.5rem;
+    height: 20vh;
   }
 `;
 const LogoName = styled.h1`
@@ -64,7 +64,7 @@ const LogoName = styled.h1`
   font-weight: 700;
   @media (max-width: 480px) {
     font-size: 2rem;
-    padding: 5px;
+    padding: 1rem;
   }
 `;
 const Navbar = styled.nav`
@@ -93,6 +93,9 @@ const NavbarLink = styled(Link)`
   }
   @media (max-width: 460px) {
     font-size: 20px;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 const VerifyContainer = styled(Link)`
@@ -122,7 +125,7 @@ const CartButton = styled.button`
     height: 40px;
     border-radius: 20px;
     padding: 0.5rem;
-    bottom: 20px;
+    bottom: 25px;
   }
 `;
 const ButtonContainer = styled.div`

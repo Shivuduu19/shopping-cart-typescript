@@ -33,6 +33,7 @@ const HomeWrapper = styled.div`
     flex-direction: column;
     gap: 5px;
     padding: 5px;
+    height: 70vh;
   }
 `;
 const fadein = keyframes`
@@ -64,13 +65,13 @@ const HomeInfo = styled.div`
   }
 `;
 const IntroInfo = styled.div`
-  color: #7b72e6;
+  color: #584be8;
   font-weight: bold;
   font-size: 4rem;
   text-align: center;
   text-transform: uppercase;
   @media (max-width: 460px) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 const IntoBigger = styled.div`

@@ -53,6 +53,7 @@ const Cart = () => {
 
 const CardWrapper = styled.div<{ $isOpen?: true | false }>`
   height: 100%;
+  width: 100%;
   position: fixed;
   z-index: 1;
   /* right: -110%; */
@@ -80,6 +81,9 @@ const CardWrapper = styled.div<{ $isOpen?: true | false }>`
 const Title = styled.div`
   font-size: bold;
   font-size: 4rem;
+  @media (max-width: 460px) {
+    font-size: 2rem;
+  }
 `;
 const Products = styled.div`
   display: flex;
@@ -94,7 +98,7 @@ const Total = styled.div`
   padding: 3rem;
 `;
 const Button = styled.button<{ $color?: string }>`
-  font-size: 2rem;
+  font-size: 1.5;
   width: 100%;
   background-color: ${(props) => props.$color};
   /* ${(props) =>

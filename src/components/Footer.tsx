@@ -27,6 +27,10 @@ const FooterWrapper = styled.footer`
   font-size: 2rem;
   padding: 1rem 0;
   /* background-color: pink; */
+  @media (max-width: 460px) {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
 `;
 const GithubLink = styled.a`
   margin-left: 1rem;
