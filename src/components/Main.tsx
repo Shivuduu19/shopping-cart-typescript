@@ -18,5 +18,8 @@ const MainWrapper = styled.main`
   padding: 3rem;
   width: 100%;
   padding-bottom: 10rem;
+  @media (max-width: 460px) {
+    padding: 1rem;
+  }
 `;
 export default Main;

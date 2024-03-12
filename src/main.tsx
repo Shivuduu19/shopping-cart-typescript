@@ -9,6 +9,13 @@ import Contact from "./pages/Contact.jsx";
 import "./index.css";
 import { LogIn } from "./pages/login/LogIn.jsx";
 import ErrorPage from "./ErrorPage.js";
+
+// Import your publishable key
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
+}
 const router = createBrowserRouter([
   {
     path: "/",

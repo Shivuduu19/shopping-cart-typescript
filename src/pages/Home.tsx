@@ -31,6 +31,8 @@ const HomeWrapper = styled.div`
   /* background: transparent; */
   @media (max-width: 460px) {
     flex-direction: column;
+    gap: 5px;
+    padding: 5px;
   }
 `;
 const fadein = keyframes`
@@ -47,7 +49,8 @@ const Image = styled.img`
   animation: 2s ease ${fadein};
   @media (max-width: 460px) {
     /* display: none; */
-    width: 100%;
+    width: 80%;
+    margin-top: 10px;
   }
 `;
 const HomeInfo = styled.div`
@@ -67,7 +70,7 @@ const IntroInfo = styled.div`
   text-align: center;
   text-transform: uppercase;
   @media (max-width: 460px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `;
 const IntoBigger = styled.div`
@@ -78,7 +81,7 @@ const IntoBigger = styled.div`
     text-align: center;
   }
   @media (max-width: 460px) {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #5e3b9b;
   }
 `;
@@ -94,6 +97,11 @@ const Button = styled.button`
   transition: transform 0.15s ease-in-out;
   &:hover {
     transform: scale(1.13);
+  }
+  @media (max-width: 460px) {
+    margin-top: 5px;
+    font-size: medium;
+    padding: 1rem 4rem;
   }
 `;
 export { fadein };

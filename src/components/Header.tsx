@@ -50,7 +50,10 @@ const Container = styled.div`
   margin: 0 auto;
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 3rem;
+    /* gap: 3rem; */
+  }
+  @media (max-width: 460px) {
+    padding: 0.5rem;
   }
 `;
 const LogoName = styled.h1`
@@ -59,6 +62,10 @@ const LogoName = styled.h1`
   padding: 50px;
   padding-left: 9rem;
   font-weight: 700;
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    padding: 5px;
+  }
 `;
 const Navbar = styled.nav`
   display: flex;
@@ -66,10 +73,11 @@ const Navbar = styled.nav`
   align-content: center;
   gap: 6rem;
   font-size: 2rem;
-  @media (max-width: 480px) {
+  @media (max-width: 460px) {
     width: 100%;
-    gap: 1rem;
-    font-size: 1rem;
+    gap: 8px;
+    /* display: none; */
+    font-size: 20px;
   }
 `;
 const NavbarLink = styled(Link)`
@@ -83,6 +91,9 @@ const NavbarLink = styled(Link)`
   &:hover {
     transform: scale(1.3);
   }
+  @media (max-width: 460px) {
+    font-size: 20px;
+  }
 `;
 const VerifyContainer = styled(Link)`
   margin: auto;
@@ -92,7 +103,7 @@ const CartButton = styled.button`
   justify-content: center;
   align-items: center;
   color: #91c1d4;
-  font-size: 40px;
+  /* font-size: 40px; */
   font-weight: 600;
   transition: trasform 0.2s ease-in;
   &:hover {
@@ -102,6 +113,16 @@ const CartButton = styled.button`
   padding: 1rem;
   &:active {
     transform: scale(1.1);
+  }
+  @media (max-width: 460px) {
+    /* font-size: 5px; */
+    /* font-weight: 200; */
+    position: absolute;
+    right: 1px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0.5rem;
+    bottom: 20px;
   }
 `;
 const ButtonContainer = styled.div`
