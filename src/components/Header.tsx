@@ -114,9 +114,9 @@ const NavbarLink = styled(Link)`
     }
   }
 `;
-const VerifyContainer = styled(Link)`
-  margin: auto;
-`;
+// const VerifyContainer = styled(Link)`
+//   margin: auto;
+// `;
 const CartButton = styled.button`
   display: flex;
   justify-content: center;
