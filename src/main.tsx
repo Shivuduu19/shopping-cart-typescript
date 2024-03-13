@@ -7,15 +7,12 @@ import Home from "./pages/Home.jsx";
 import Products from "./pages/products/Products.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./index.css";
-import { LogIn } from "./pages/login/LogIn.jsx";
+// import { LogIn } from "./pages/login/LogIn.jsx";
 import ErrorPage from "./ErrorPage.js";
+import Protected from "./components/Protected.tsx";
+import SignInPage from "./pages/login/LogIn.js";
+import SignUpPage from "./components/SignUp.js";
 
-// Import your publishable key
-// const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-// if (!PUBLISHABLE_KEY) {
-//   throw new Error("Missing Publishable Key");
-// }
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,9 +23,17 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      { path: "products", element: <Products /> },
-      { path: "contact", element: <Contact /> },
-      { path: "login", element: <LogIn /> },
+      { path: "/sign-in", element: <SignInPage /> },
+      { path: "/sign-up", element: <SignUpPage /> },
+      {
+        element: <Protected />,
+        path: "protected",
+        children: [
+          { path: "products", element: <Products /> },
+          { path: "contact", element: <Contact /> },
+        ],
+      },
+      // { path: "login", element: <LogIn /> },
     ],
   },
 ]);

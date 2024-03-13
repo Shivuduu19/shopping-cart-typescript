@@ -10,7 +10,7 @@ const Home = () => {
         <HomeInfo>
           <IntroInfo>A place for grate fashion</IntroInfo>
           <IntoBigger>Become the unique person </IntoBigger>
-          <Link to="products">
+          <Link to="protected/products">
             <Button>shop now</Button>
           </Link>
         </HomeInfo>

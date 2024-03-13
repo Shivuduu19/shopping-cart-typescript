@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import { openCart } from "../pages/cart/CartOpenSlice";
 import { useAppDispatch, useAppSelector } from "../state/hooks";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 const Header = () => {
   const dispatch = useAppDispatch();
   const cart = useAppSelector((state) => state.cart.value);
-  const login = useAppSelector((state) => state.login.value);
+  // const login = useAppSelector((state) => state.login.value);
   const sumQuantity = () =>
     cart.reduce((total, item) => total + item.quantity, 0);
   // console.log(login);
@@ -19,11 +20,17 @@ const Header = () => {
           <LogoName>Fake Store</LogoName>
           <Navbar>
             <NavbarLink to="/">Home</NavbarLink>
-            <NavbarLink to="products">Products</NavbarLink>
-            <NavbarLink to="contact">Contact</NavbarLink>
-            {login ? null : (
+            <NavbarLink to="protected/products">Products</NavbarLink>
+            <NavbarLink to="protected/contact">Contact</NavbarLink>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/sign-in" />
+            </SignedIn>
+            <SignedOut>
+              <Link to="/sign-in">Sign In</Link>
+            </SignedOut>
+            {/* {login ? null : (
               <VerifyContainer to="login">signin</VerifyContainer>
-            )}
+            )} */}
             <ButtonContainer>
               <CartButton onClick={() => dispatch(openCart())}>
                 {/* <button onClick={() => dispatch(openCart())}>dsfgsdf</button> */}
