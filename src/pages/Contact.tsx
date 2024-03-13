@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <ContactWrapper>
-      <h1>phone no:8919687188</h1>
+      <h1>phone no:8913454188</h1>
       <h1>Email:shivakamtam19@gmail.com</h1>
     </ContactWrapper>
   );

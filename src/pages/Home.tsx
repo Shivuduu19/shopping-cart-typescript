@@ -48,6 +48,9 @@ const Image = styled.img`
   width: 60rem;
   border-radius: 50px;
   animation: 2s ease ${fadein};
+  @media (max-width: 1400px) {
+    width: 40rem;
+  }
   @media (max-width: 460px) {
     /* display: none; */
     width: 80%;
@@ -65,13 +68,14 @@ const HomeInfo = styled.div`
   }
 `;
 const IntroInfo = styled.div`
-  color: #584be8;
+  color: #312a81;
   font-weight: bold;
   font-size: 4rem;
   text-align: center;
   text-transform: uppercase;
   @media (max-width: 460px) {
     font-size: 1.5rem;
+    color: #584be8;
   }
 `;
 const IntoBigger = styled.div`

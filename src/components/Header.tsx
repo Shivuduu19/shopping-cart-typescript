@@ -48,6 +48,9 @@ const Container = styled.div`
   padding: 2rem;
   width: 100%;
   margin: 0 auto;
+  @media (max-width: 1400px) {
+    padding: 1rem;
+  }
   @media (max-width: 768px) {
     flex-direction: column;
     /* gap: 3rem; */
@@ -62,6 +65,9 @@ const LogoName = styled.h1`
   padding: 50px;
   padding-left: 9rem;
   font-weight: 700;
+  @media (max-width: 1400px) {
+    padding: 1rem;
+  }
   @media (max-width: 480px) {
     font-size: 2rem;
     padding: 1rem;
@@ -91,6 +97,9 @@ const NavbarLink = styled(Link)`
   &:hover {
     transform: scale(1.3);
   }
+  @media (max-width: 1400px) {
+    font-size: 25px;
+  }
   @media (max-width: 460px) {
     font-size: 20px;
     &:hover {
@@ -106,7 +115,7 @@ const CartButton = styled.button`
   justify-content: center;
   align-items: center;
   color: #91c1d4;
-  /* font-size: 40px; */
+  font-size: 40px;
   font-weight: 600;
   transition: trasform 0.2s ease-in;
   &:hover {
