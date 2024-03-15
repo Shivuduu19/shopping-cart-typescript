@@ -4,6 +4,7 @@ import CartItemCard from "./CartItemCards";
 import styled, { css } from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import { closeCart } from "./CartOpenSlice";
+import { useMemo } from "react";
 
 const Cart = () => {
   const cart = useAppSelector((state) => state.cart.value);
@@ -23,19 +24,19 @@ const Cart = () => {
 
   // console.log(isCartOpen);
 
-  const sumTotal = () =>
+  const sumTotal = useMemo(() =>
     cart
       .reduce(
         (total, cartItem) => total + cartItem.price * cartItem.quantity,
         0
       )
-      .toFixed(2);
+      .toFixed(2), [cart]);
   // console.log(sumTotal);
   return (
     <CardWrapper $isOpen={isCartOpen}>
       <Title>Your cart items</Title>
       <Products>{cartItems}</Products>
-      <Total>Total:{sumTotal()}</Total>
+      <Total>Total:{sumTotal}</Total>
       <Button
         $color="green"
         onClick={() => {
